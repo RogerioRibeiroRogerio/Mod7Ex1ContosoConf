@@ -1,14 +1,52 @@
-﻿// Import objects/functions from the conference namespace.
-import { LocalStarStorage } from "../LocalStarStorage.js";
-import { ScheduleList } from "../ScheduleList.js";
+﻿/// <reference path="../HtmlTemplate.js" />
+/// <reference path="../LocalStarStorage.js" />
+/// <reference path="../datetime.js" />
 
-// TODO: Replace the following code by creating a ScheduleList object 
-//       and calling the startDownload method.
+// Import objects/functions from the conference namespace.
+import { ScheduleList } from "../ScheduleList.js";
+import { LocalStarStorage } from "../LocalStarStorage.js";
+
+const scheduleListElement = document.getElementById("schedule");
 const scheduleList = new ScheduleList(
-    document.getElementById("schedule"),
-     new LocalStarStorage(localStorage)
+    scheduleListElement,
+    new LocalStarStorage(localStorage)
 );
+
 scheduleList.startDownload();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// Import objects/functions from the conference namespace.
+//import { LocalStarStorage } from "../LocalStarStorage.js";
+//import { ScheduleList } from "../ScheduleList.js";
+
+
+//// TODO: Replace the following code by creating a ScheduleList object 
+////       and calling the startDownload method.
+//const scheduleList = new ScheduleList(
+//    document.getElementById("schedule"),
+//     new LocalStarStorage(localStorage)
+//);
+//scheduleList.startDownload();
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
